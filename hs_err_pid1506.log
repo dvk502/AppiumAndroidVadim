@@ -1,0 +1,47 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 70254592 bytes for committing reserved memory.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_linux.cpp:3007), pid=1506, tid=1508
+#
+# JRE version: OpenJDK Runtime Environment (11.0.13+8) (build 11.0.13+8-LTS)
+# Java VM: OpenJDK 64-Bit Server VM (11.0.13+8-LTS, mixed mode, tiered, compressed oops, g1 gc, linux-amd64)
+# Core dump will be written. Default location: Core dumps may be processed with "/lib/systemd/systemd-coredump %P %u %g %s %t 9223372036854775808 %e" (or dumping to /home/yana/IdeaProjects/ActualAndroidAppiumLastVer/core.1506)
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -ea -Dlog4j.configuration=file:log4j.properties -ea -Drecorder.type=FFMPEG -Dvideo.folder=web_video_result -Dvideo.mode=ANNOTATED -Dvideo.save.mode=ALL -Dffmpeg.display=title=Log In - TrackEnsure - Google Chrome -Duser.language=en -Dtestng.dtd.http=true -Dfile.encoding=UTF-8 -javaagent:/home/yana/.m2/repository/org/aspectj/aspectjweaver/1.8.10/aspectjweaver-1.8.10.jar -javaagent:/app/idea-IC/lib/intellij-coverage-agent-1.0.613.jar=/tmp/coverage2args -Didea.new.sampling.coverage=true -Dcoverage.ignore.private.constructor.util.class=true -Didea.test.cyclic.buffer.size=1048576 -javaagent:/app/idea-IC/lib/idea_rt.jar=39531:/app/idea-IC/bin com.intellij.rt.testng.RemoteTestNGStarter -usedefaultlisteners false -socket39837 @w@/tmp/idea_working_dirs_testng.tmp -temp /tmp/idea_testng.tmp
+
+Host: Intel(R) Pentium(R) Gold G5400 CPU @ 3.70GHz, 4 cores, 7G, Freedesktop.org 21.08.8 (Flatpak runtime)
+Time: Sun Jan  9 07:35:45 2022 EST elapsed time: 366.584994 seconds (0d 0h 6m 6s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007fdd7c057000):  JavaThread "Forwarding stopRecordingScreen on session ac01c27b-01fb-4035-a3a1-947f0b53eeb7 to remote" [_thread_in_vm, id=1508, stack(0x00007fdd82213000,0x00007fdd82314000)]
+
+Stack: [0x00007fdd82213000,0x00007fdd82314000],  sp=0x00007fdd82310640,  free space=1013k
+Native frames: (J=compiled Java code, A=aot compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0xf42fb9]  VMError::report_and_die(int, char const*, char const*, __va_list_tag*, Thread*, unsigned char*, void*, void*, char const*, int, unsigned long)+0x389
+V  [libjvm.so+0xf43c8b]  VMError::report_and_die(Thread*, char const*, int, unsigned long, VMErrorType, char const*, __va_list_tag*)+0x2b
+V  [libjvm.so+0x6cf715]
+[timeout occurred during error reporting in step "printing native stack"] after 39 s.
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+v  ~RuntimeStub::_new_array_nozero_Java
+J 3974

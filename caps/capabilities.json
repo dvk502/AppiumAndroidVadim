@@ -1,0 +1,28 @@
+{
+  "android": {
+    "platformName": "android",
+    "platformVersion": "11.0",
+    "app": "./testapp.apk",
+    "appPackage": "com.trackensure.eld.debug",
+    "appActivity":"eld.trackensure.SplashScreenActivity",
+    "deviceName": "SamsungTab",
+    "noSign": true
+  },
+  "hostMachines": [
+    {
+      "machineIP": "127.0.0.1",
+      "simulators": [
+        {
+          "deviceName": "Samsung Tab 7",
+          "OS": "11.0"
+        },
+        {
+          "deviceName": "Samsung Tab 7",
+          "OS": "11.0"
+        }
+      ]
+    }
+  ],
+  "ATDServiceHost":"127.0.0.1",
+  "ATDServicePort":"3000"
+}

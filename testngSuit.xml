@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MainTests" verbose="1" parallel="tests" thread-count="5">
+    <test name = "Samsung-Tab7" parallel = "classes" thread-count="5">
+        <parameter name="deviceName" value="10.10.1.201:5656" />
+        <parameter name="udid" value="R9WN51C01AJ"/>
+        <parameter name="platformVersion" value="11" />
+        <classes>
+            <class name = "Test_Case9_TruckManagement" />
+        </classes>
+    </test>
+
+    <test name = "Xiaomi" parallel = "classes" thread-count="5">
+        <parameter name="deviceName" value="10.10.2.74:5656" />
+        <parameter name="udid" value="R9WN50QWFHJ"/>
+        <parameter name="platformVersion" value="10" />
+        <classes>
+            <class name = "Test_Case12_LogoutScreen" />
+        </classes>
+    </test>
+    <!--<test name="Проверка регистрации">
+            <classes>
+                <class name="Test_Case1_Registration"/>
+            </classes>
+        </test>-->
+</suite>
